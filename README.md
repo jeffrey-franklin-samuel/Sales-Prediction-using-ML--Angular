@@ -1,2 +1,1 @@
-"# Sales-prediction-using-ml-angular" 
-"# Sales-Prediction-using-ML--Angular" 
+" Sales-prediction-using-ml-angular" 
