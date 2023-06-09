@@ -1,0 +1,4 @@
+run- ng serve
+server virtual machine - venv/Scripts/activate.bat
+run flask server- nodemon api.py
+add pip file to run server

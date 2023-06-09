@@ -1,0 +1,56 @@
+
+<div class="container">
+
+  <mat-card>
+    <button mat-raised-button color="primary" routerLink="/home2" style="position: absolute;
+top: 10px;
+right: 10px;">
+  back
+</button>
+    <h1>Welcome</h1>
+    <h2>let's start forecasting</h2>
+    <div class="select-container">
+      <label for="date-select">Select Prediction Period:</label>
+      <mat-select [(ngModel)]="name" id="date-select">
+        <mat-option value="dates" selected>dates</mat-option>
+        <mat-option value="day">day</mat-option>
+        <mat-option value="month">month</mat-option>
+        <mat-option value="year">year</mat-option>
+      </mat-select>
+    </div>
+
+    <div class="date-inputs">
+      <div>
+        <label for="start-day-input">Start Date</label>
+        <mat-form-field>
+          <input matInput [(ngModel)]="sd" type="text" id="start-day-input" placeholder="Day of Month">
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput [(ngModel)]="sm" type="text" id="start-month-input" placeholder="Month">
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput [(ngModel)]="sy" type="text" id="start-year-input" placeholder="Year">
+        </mat-form-field>
+      </div>
+      <div>
+        <label for="end-day-input">End Date</label>
+        <mat-form-field>
+          <input matInput [(ngModel)]="ed" type="text" id="end-day-input" placeholder="Day of Month">
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput [(ngModel)]="em" type="text" id="end-month-input" placeholder="Month">
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput [(ngModel)]="ey" type="text" id="end-year-input" placeholder="Year">
+        </mat-form-field>
+      </div>
+    </div>
+
+    <form (submit)="onSubmit($event)">
+      <input type="file" name="file" (change)="onFileSelected($event)" />
+      <button type="submit" mat-raised-button color="primary">Submit</button>
+    </form>
+
+    <button mat-button routerLink="/graph" color="primary">View Predictions</button>
+  </mat-card>
+</div>

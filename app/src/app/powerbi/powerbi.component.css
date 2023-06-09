@@ -1,0 +1,142 @@
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  padding: 100px;
+  margin: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+@keyframes gradientFlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+@keyframes gradientFlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, #fff9f9, #575757, #ffffff);
+  background-size: 200% 200%;
+  animation: gradientFlow 10s linear infinite;
+}
+
+
+h1 {
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  animation: moveUpDown 2s infinite;
+}
+
+@keyframes moveUpDown {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.pred-card,
+.fore-card {
+  width: 500px;
+  margin: 10px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  background-color: #f8f8f8;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  animation: zoomIn 0.5s ease;
+  opacity: .8;
+  position: relative; /* Add this line to enable z-index positioning */
+}
+
+@keyframes zoomIn {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+.container:hover .pred-card:not(:hover),
+.container:hover .fore-card:not(:hover) {
+
+  z-index: 0; /* Set the z-index to a lower value to keep non-hovered cards below */
+}
+
+.pred-card:hover,
+.fore-card:hover {
+  transform: scale(1.8);
+  filter: none;
+  z-index: 1; /* Set the z-index to a higher value to bring the hovered card to the top */
+}
+
+.pred-card h1,
+.fore-card h1 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.mat-card-title {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.mat-card-subtitle {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.mat-card-xl-image {
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.forecast {
+  margin-top: 20px;
+}
+
+.mat-card-header {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background-color: #f8f8f8;
+}
+
+.mat-card {
+  margin-top: 80px;
+}

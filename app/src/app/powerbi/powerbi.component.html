@@ -1,0 +1,80 @@
+<button mat-raised-button color="primary" routerLink="/graph" style="position: absolute;
+top: 10px;
+right: 10px;">
+  Back
+</button>
+
+<div>
+  <h1 >Prediction Model</h1>
+</div>
+
+<div class="predictions">
+
+
+  <div class="container" >
+
+
+
+<mat-card class="pred-card">
+  <mat-card-header>
+    <mat-card-title-group>
+      <mat-card-title>Powerbi For Prediction</mat-card-title>
+      <mat-card-subtitle><p>
+        >Click on image or scan image to view.
+        <br>
+        >Download the PowerBi mobile app for better view on mobile
+        <br>
+        >Detailed interactive display for the prediction
+        <br>
+        >advisable to view on phone
+      </p>
+
+      </mat-card-subtitle>
+      <a (click)="PredictionWindow()">
+        <img  mat-card-xl-image src="../../assets/PredictionQR.jpg" >
+
+      </a>
+    </mat-card-title-group>
+  </mat-card-header>
+</mat-card>
+
+
+
+  </div>
+</div>
+
+
+<div>
+  <h1>Forecast</h1>
+</div>
+<div class="forecast">
+
+  <div class="container">
+
+
+
+<mat-card class="fore-card">
+  <mat-card-header>
+    <mat-card-title-group>
+      <mat-card-title>Powerbi For Forecast</mat-card-title>
+      <mat-card-subtitle><p>
+        >Click on image or scan image to view.
+        <br>
+        >Download the PowerBi mobile app for better view on mobile
+        <br>
+        >Detailed interactive display for the forecast
+        <br>
+        >advisable to view on phone
+      </p></mat-card-subtitle>
+      <a (click)="ForecastWindow()" >
+        <img mat-card-xl-image src="../../assets/ForecastQR.jpg" >
+
+      </a>
+      </mat-card-title-group>
+  </mat-card-header>
+</mat-card>
+
+
+  </div>
+</div>
+
